@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Stack {
     
-    Node head =null;//empty list
+    Node head =null;
     /**
      * methods are created to handle all the elements of the stacks as if
      * empty, push and pop
@@ -19,14 +19,14 @@ public class Stack {
      * 
      * @return 
      */
-    public boolean isEmpty(){ //si el nodo esta vacio 
+    public boolean isEmpty(){
         return head == null ? true : false;
     }
     /**
      * 
      * @param newNode 
      */
-    public void Push(Node newNode){//primer nodo
+    public void Push(Node newNode){
         newNode.next = head;
         head = newNode;//apuntamos para no perder la lista
     }
@@ -39,9 +39,8 @@ public class Stack {
     public static void main(String[] args) throws IOException{
         Stack students = new Stack();
         students.Push(new Node("alum1",11,1111));
-        students.Push(new Node("alum2",12,2222));//dos nodos a la lista
+        students.Push(new Node("alum2",12,2222));
         students.Push(new Node("alum3",13,3333));
-        
         System.out.println(students.Pop().toString());
         System.out.println(students.Pop().toString());
         System.out.println(students.Pop().toString());
