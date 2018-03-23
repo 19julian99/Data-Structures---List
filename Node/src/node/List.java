@@ -12,7 +12,7 @@ public class List {
     /**
      * a head node is created that is equal to null
      */
-    Node head = null;//empty list
+    Node head = null;
 
     /**
      * the following function validates the status of the list depending on
@@ -20,7 +20,7 @@ public class List {
      *
      * @return
      */
-    public boolean isEmpty() { //si el nodo esta vacio 
+    public boolean isEmpty() { 
         return head == null ? true : false;
     }
 
@@ -30,9 +30,9 @@ public class List {
      *
      * @param newNode
      */
-    public void InsertAtBegin(Node newNode) {//primer nodo
+    public void InsertAtBegin(Node newNode) {
         newNode.next = head;
-        head = newNode;//apuntamos para no perder la lista
+        head = newNode;
     }
 
     /**
@@ -70,7 +70,7 @@ public class List {
         Node temp;
         Node pre = head;
         if (index == 0) {
-            InsertAtBegin(newNode);//insertamos el nodo
+            InsertAtBegin(newNode);
             return;
         }
         for (int i = 0; i < index - 1; i++) {
@@ -122,16 +122,16 @@ public class List {
      * @param index
      */
     public void deleteAtIndex(int index) {
-        Node temp = head;//comienza desde la cabeza
+        Node temp = head;
         if (index == 0) {
             DeleteAtBegin();
             System.gc();
-            for (int i = 0; i < index - 1; i++) //recorremos todo hasta llegar al index
+            for (int i = 0; i < index - 1; i++) 
             {
-                temp = temp.next;//tomamos el siguiente
+                temp = temp.next;
             }
             Node toDelete = temp.next;
-            temp.next = toDelete.next;//toma el indice
+            temp.next = toDelete.next;
             toDelete = null;
             System.gc();
         }
@@ -144,7 +144,7 @@ public class List {
      *
      * @throws IOException
      */
-    public void reverse() throws IOException {//inversa de la lista
+    public void reverse() throws IOException {
         Stack tempList = new Stack();
         Node temp = head;
         while (temp != null) {
@@ -167,7 +167,7 @@ public class List {
         try {
             Node temp = head;
             while (temp != null) {
-                bw.write(temp.toString());//
+                bw.write(temp.toString());
                 temp = temp.next;
                 bw.flush();
             }
