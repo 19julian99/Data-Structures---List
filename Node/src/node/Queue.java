@@ -2,7 +2,7 @@ package node;
 
 public class Queue {
     
-    Node head =null;//empty list
+    Node head =null;
     /**
      * methods are created to handle all the elements of the queues like 
      * enqueue or dequeue
